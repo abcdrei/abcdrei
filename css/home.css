@@ -1,0 +1,156 @@
+body {
+  background-color: rgb(19, 19, 19);
+}
+
+@font-face {
+  font-family: myFont;
+  src: url(Hanson-Bold.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 10em;
+    padding: 20px 20px;
+    text-align: center;
+    font-family: myFont;
+  }
+  
+  nav a:link,
+  nav a:visited {
+    color: #ee120e;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 5px;
+  }
+  
+  nav a:hover,
+  nav a:active {
+    color: white;
+    transform: scale(1.2);
+  }
+
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px 0;
+    transition: padding 1s;
+  }
+
+  header.sticky {
+    background-color: rgba(19, 19, 19, 0.911);
+    padding: 5px;
+    z-index: 1;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+    width: 35%;
+  }
+
+  h2 {
+    font-size: 100px;
+    font-family: myFont;
+    background: -webkit-linear-gradient(#ee120e, #f27b13);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  body {
+    font-family: sans-serif;
+    font-size: 1rem;
+  }
+
+  section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    background-size: cover;
+    background-position: center;
+  }
+
+  #welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  footer {
+    color: white;
+    letter-spacing: 0.8px;
+    width: 100%;
+    background-color: #ee120e;
+    padding: 5px;
+    font-size: 10px;
+    font-style: italic;
+    text-align: center;
+  }
+
+  
+.opaque-bg {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 380px;
+  padding: 1px 1px 5px 5px;
+}
+
+.aboutme {
+  background: url("https://s3-us-west-2.amazonaws.com/files.bradengelhardt.com/brad-bg-main.jpg")
+    no-repeat;
+  background-size: cover;
+}
+
+.aboutme p {
+  color: white;
+  font-weight: 100;
+  font-size: 17.4px;
+}
+
+  @media screen and (max-width: 480px) {
+    nav {
+      flex-direction: column;
+      gap: 10px;
+      padding: 10px;
+    }
+
+    nav a:link,
+    nav a:visited {
+      font-size: 0.7em;
+    }
+
+    .content {
+      height: auto;
+    }
+
+    .logo {
+      width: 100%;
+    }
+
+    h2 {
+      font-size: 50px;
+    }
+
+    section {
+      height: auto;
+    }
+  }

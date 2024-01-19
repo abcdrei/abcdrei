@@ -1,0 +1,45 @@
+:root {
+    --size: 180px;
+    --radius: calc(var(--size) * 20 / 100);
+    margin-bottom: 10px;
+  }
+
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .image-card {
+    width: var(--size);
+    height: var(--size);
+    border-radius: var(--radius);
+    position: relative;
+    background-size: cover;
+    margin: calc(var(--size) * 20 / 100);
+    border: 2px solid white;
+    background-position: center;
+    overflow: hidden;
+  }
+  .caption {
+    position: absolute;
+    text-align: center;
+    font-family: myFont;
+    font-size: 12px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .image-card:hover .caption {
+    opacity: 1;
+  }
+
